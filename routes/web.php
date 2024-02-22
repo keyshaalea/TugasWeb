@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\halloController;
+use App\Https\Controllers\KeyshaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function(){
     return view('welcome');
-});
+}
+);
+
+Route::get('/first',[halloController::class,'index']);
+    Route::get('/first2', [KeyshaController::class,'index']);
+
+ 
